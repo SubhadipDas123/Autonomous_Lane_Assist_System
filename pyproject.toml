@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "autonomous_lane_assist_system"
+version = "0.1.0"
+description = "A small library for lane detection and basic image operations, refactored from scripts."
+authors = ["SubhadipDas123 <127828935+SubhadipDas123@users.noreply.github.com>"]
+packages = [
+  { include = "autonomous_lane_assist_system" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.24"
+opencv-python = "^4.7"
+scipy = "^1.11"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+[tool.poetry.scripts]
+als-lanekeep = "autonomous_lane_assist_system.lanekeeping:main"
+als-imageops = "autonomous_lane_assist_system.image_ops:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
